@@ -2,14 +2,32 @@
 {% block content %}
 <h1>Add a Blog Entry</h1>
 <form action="/newpost" method="POST">
-
-    Tile for your new blog:
-    <input id="blogtitle" name="title" type="text" value="{{new_title}}">
-    
-    Your new blog:
-    <textarea rows="5" cols="50" id="body_text" name="body">{{new_body}}</textarea>
-
-    <input id="submit" type="submit" value="Add Entry">
-
+<table>
+    <tr>
+        <td>
+            Title for your new blog:
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><input id="blogtitle" name="title" type="text" value="{{new_title}}"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Your new blog:
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><textarea rows="5" cols="50" id="body_text" name="body">{{new_body}}</textarea></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="submit" type="submit" value="Add Entry">
+        </td>
+    </tr>
+</table>
 </form>
 {% endblock %}
