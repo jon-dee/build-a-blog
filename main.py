@@ -30,7 +30,7 @@ def blog_display():
     if request.args:
         blog_id = request.args.get('id')
         blog_post = Blogs.query.get(blog_id)
-        return render_template('blogentry.html', title="Blog Entry", blog_post=blog_post, blog_id=blog_id)
+        return render_template('blogentry.html', title="Blog Entry", blog_post=blog_post)
 
         blog = Blogs.query.all()
         return render_template('blog.html', blog=blog)
