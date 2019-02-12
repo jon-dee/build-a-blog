@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -32,8 +32,6 @@ def blog_display():
         blog_post = Blogs.query.get(blog_id)
         return render_template('blogentry.html', title="Blog Entry", blog_post=blog_post)
 
-        blog = Blogs.query.all()
-        return render_template('blog.html', blog=blog)
 
     else:  
         blog = Blogs.query.all()
